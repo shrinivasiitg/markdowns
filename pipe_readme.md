@@ -154,6 +154,8 @@ mpirun -n 8 /home/aishwarya/workspace/PIPE/PIPE/code/genTab/genTab \
 ```
 * Check the progress: ```tail -f ~/workspace/PIPE/PIPE/code/genTab/mpirun_8_genTab_output``` 
 
+For future reference, we have stored the database for all the proteins at ```/home/aishwarya/Downloads/database```, so that we don't have to run ```genTab``` again (which took ~10 hrs to run for all proteins)
+
 ## 4. Run PIPE prediction
 * Verify ```mp-pipe2.c``` that the file ```~/workspace/PIPE/PIPE/code/MP-PIPE2/mp-pipe2.c``` (around line# ```59```), no need to change the existing values, which should look like this:
 ```c
@@ -171,15 +173,18 @@ mpicc -O3 -fopenmp -Wall mp-pipe2.c -m64 -lm -o mp-pipe2
 ```
 * Run PIPE
 ```shell script
-cd ~/workspace/PIPE/PIPE/code/MP-PIPE2/
+rm -rf /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236
+mkdir -p /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236
 
 mpirun -n 8 /home/aishwarya/workspace/PIPE/PIPE/code/MP-PIPE2/mp-pipe2 \
 /home/aishwarya/workspace/PIPE/PIPE/data/organism/input/organism.in \
-/home/aishwarya/workspace/PIPE/PIPE/data/organism/output/organism.out \
+/home/aishwarya/workspace/PIPE/PIPE/data/organism/output/organism_out.tsv \
 /home/aishwarya/workspace/PIPE/PIPE/data/organism/data/protein_pairs_index.txt \
 /home/aishwarya/workspace/PIPE/PIPE/data/organism/data/protein_pairs_indexes.txt \
-/home/aishwarya/workspace/PIPE/PIPE/data/organism/database \
+/home/aishwarya/Downloads/database \
 /home/aishwarya/workspace/PIPE/PIPE/data/organism/data/PIPE_org.txt \
 > mpirun_8_mp-pipe2_output & disown
 ```
+
+
 * Check the progress: ```tail -f ~/workspace/PIPE/PIPE/code/MP-PIPE2/mpirun_8_mp-pipe2_output```
