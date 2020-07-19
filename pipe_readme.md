@@ -175,6 +175,7 @@ mpicc -O3 -fopenmp -Wall mp-pipe2.c -m64 -lm -o mp-pipe2
 ```shell script
 rm -rf /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236
 mkdir -p /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236
+cd /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236
 
 mpirun -n 8 /home/aishwarya/workspace/PIPE/PIPE/code/MP-PIPE2/mp-pipe2 \
 /home/aishwarya/workspace/PIPE/PIPE/data/organism/input/organism.in \
