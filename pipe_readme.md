@@ -47,8 +47,6 @@ This is most likely **NOT** an option (must do it !!)
 Get these two numbers:
 1. number of lines in the protein_sequences.txt file = ```wc -l ~/workspace/PIPE/PIPE/data/organism/data/protein_sequences.txt```
 1. number of lines in the protein_pairs.txt file = ```wc -l ~/workspace/PIPE/PIPE/data/organism/data/protein_pairs.txt```
-$STR_PAIR_FILE="/home/aishwarya/workspace/PIPE/PIPE/data/organism/data/protein_pairs.txt";
-
 
 Make sure in the file ```~/workspace/PIPE/PIPE/code/genTab/PIPE.h```, these param looks something like this:
 ```c
