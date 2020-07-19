@@ -23,7 +23,7 @@ python ~/workspace/PIPE/PIPE/data/organism/data/create_test_small.py
 ```
 ## 2. Configure ```genTab```
 ### 2.1. ```convertPairs.pl```
-Make sure that the file ```~/workspace/PIPE/PIPE/code/genTab/./convertPairs.pl``` has the correct complete path (```absolute path```) for the first three files, like this:
+Make sure that the file ```~/workspace/PIPE/PIPE/code/genTab/convertPairs.pl``` has the correct complete path (```absolute path```) for the first three files, like this:
 ```perl
 $SEQ_FILE="/home/aishwarya/workspace/PIPE/PIPE/data/organism/data/protein_sequences.txt";
 $STR_PAIR_FILE="/home/aishwarya/workspace/PIPE/PIPE/data/organism/data/protein_pairs.txt";
