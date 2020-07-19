@@ -115,9 +115,8 @@ max_neighbours	16
 For file ```~/workspace/PIPE/PIPE/data/organism/data/PIPE_org.txt```, no need to change the existing values, which should look like this:
 ```text
 1
-1000
 1
-0
+0,0
 
 ```
 ```text
