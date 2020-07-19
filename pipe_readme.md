@@ -184,8 +184,8 @@ mpirun -n 8 /home/aishwarya/workspace/PIPE/PIPE/code/MP-PIPE2/mp-pipe2 \
 /home/aishwarya/workspace/PIPE/PIPE/data/organism/data/protein_pairs_indexes.txt \
 /home/aishwarya/Downloads/database \
 /home/aishwarya/workspace/PIPE/PIPE/data/organism/data/PIPE_org.txt \
-> mpirun_8_mp-pipe2_output & disown
+> /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236/mpirun_8_mp-pipe2_output & disown
 ```
 
 
-* Check the progress: ```tail -f ~/workspace/PIPE/PIPE/code/MP-PIPE2/mpirun_8_mp-pipe2_output```
+* Check the progress: ```tail -f /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236/mpirun_8_mp-pipe2_output```
