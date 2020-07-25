@@ -45,6 +45,10 @@ cd ~/workspace/PIPE/PIPE/code/genTab/
 ```
 This generates the file ```$IDX_PAIR_FILE``` (mentioned above) at the location ```/home/aishwarya/workspace/PIPE/PIPE/data/organism/data/protein_pairs_index.txt``` (as provided, yay!!)
 
+** What is this file ```protein_pairs_index.txt``` : ** 
+This file is just another effective way of storing ```protein_pairs.txt```. First, we perform "indexing" of all the proteins from the file ```protein_sequences.txt``` such that first protein (first line of ```protein_sequences.txt```) is called 0, second protein (second line of ```protein_sequences.txt```) is called 1 and so on. We follow this "indexing" convention in ```protein_pairs_index.txt```. 
+Now let's take one line from this file: ```A0AVI4 4 17 3811 3992 4195```. This represents that protein "A0AVI4" has 4 matches as per ```protein_pairs.txt```, and these matches are with protein index ```17 3811 3992 4195``` respectively.
+
 ### 2.2. disable ```inline``` functionality
 Just remove all the occurence of the exact keyword ```inline``` from these two files (that stops ```inline``` functionality)
 1. ```~/workspace/PIPE/PIPE/code/genTab/PIPE.h```
