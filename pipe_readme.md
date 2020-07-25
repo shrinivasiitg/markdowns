@@ -185,7 +185,7 @@ cd ~/workspace/PIPE/PIPE/code/MP-PIPE2/
 rm mp-pipe2
 mpicc -O3 -fopenmp -Wall mp-pipe2.c -m64 -lm -o mp-pipe2
 ```
-* Run PIPE
+### Run PIPE
 ```shell script
 rm -rf /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236
 mkdir -p /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236
@@ -200,6 +200,27 @@ mpirun -n 8 /home/aishwarya/workspace/PIPE/PIPE/code/MP-PIPE2/mp-pipe2 \
 /home/aishwarya/workspace/PIPE/PIPE/data/organism/data/PIPE_org.txt \
 > /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236/mpirun_8_mp-pipe2_output & disown
 ```
-
-
 * Check the progress: ```tail -f /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236/mpirun_8_mp-pipe2_output```
+
+### Run PIPE-SITES
+Uncomment the line, in ```mp-pipe2.c```:
+```c
+#define ENABLE_PIPE_SITES
+```
+Then run:
+```shell script
+rm -rf /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236_pipe_sites
+mkdir -p /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236_pipe_sites
+cd /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236_pipe_sites
+
+mpirun -n 8 /home/aishwarya/workspace/PIPE/PIPE/code/MP-PIPE2/mp-pipe2 \
+/home/aishwarya/workspace/PIPE/PIPE/data/organism/input/organism.in \
+/home/aishwarya/workspace/PIPE/PIPE/data/organism/output/organism_out.tsv \
+/home/aishwarya/workspace/PIPE/PIPE/data/organism/data/protein_pairs_index.txt \
+/home/aishwarya/workspace/PIPE/PIPE/data/organism/data/protein_pairs_indexes.txt \
+/home/aishwarya/Downloads/database \
+/home/aishwarya/workspace/PIPE/PIPE/data/organism/data/PIPE_org.txt \
+> /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236/mpirun_8_mp-pipe2_output & disown
+```
+* Check the progress: ```tail -f /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236_pipe_sites/mpirun_8_mp-pipe2_output```
+
