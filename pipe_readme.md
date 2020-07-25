@@ -28,7 +28,7 @@ python ~/workspace/PIPE/PIPE/data/organism/data/create_test_small.py
 * Outputs:
   * ```protein_sequences.txt``` : it is a subset of ```protein_pairs.txt_full``` and the size is ```num_prots``` (max value can be size of ```protein_sequences.txt_full```)
   * ```protein_pairs.txt``` : it is a subset of ```protein_pairs.txt_full```. This subset only contains proteins from ```protein_sequences.txt```
-  * ```test_input.names``` : it is a list of protein pairs that we want to genertae landscapes for. Clearly, we don't want any pair from ```protein_pairs.txt``` to be part of it since we know that "it iteracts"
+  * ```test_input.names``` : it is a list of protein pairs that we want to generate landscapes for. Clearly, we don't want any pair from ```protein_pairs.txt``` to be part of it since we know that "it iteracts"
 
 ## 2. Configure ```genTab```
 ### 2.1. ```convertPairs.pl```
