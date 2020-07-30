@@ -240,3 +240,38 @@ mpirun -n 8 /home/aishwarya/workspace/PIPE/PIPE/code/MP-PIPE2/mp-pipe2 \
 ```
 * Check the progress: ```tail -f /home/aishwarya/Downloads/mpirun_8_mp-pipe2_20236_pipe_sites/mpirun_8_mp-pipe2_output```
 
+## 5. Generate landscape image 
+We generate landscape images in lab machine since it is a heavy process hence want to avoid running it on Mac. So, login in to ```lab``` first.
+
+
+Command is ```/home/aishwarya/anaconda3/envs/newPy37/bin/python3.7 ~/workspace/PIPE/PIPE/data/organism/output/mat_to_pyplot.py <mat-file-complete-path>```. 
+This generates the image (in pdf format) at ```<mat-file-complete-path>.pdf```
+
+
+One example:
+```python
+/home/aishwarya/anaconda3/envs/newPy37/bin/python3.7 ~/workspace/PIPE/PIPE/data/organism/output/mat_to_pyplot.py ~/workspace/PIPE/PIPE/data/organism/output/landscapes/O43516__O00401_pipe_sites_new.mat
+```
+and the image it generates can be found at ```~/workspace/PIPE/PIPE/data/organism/output/landscapes/O43516__O00401_pipe_sites_new.mat.pdf```
+
+### How to download it to Mac
+To visualize it, we need to download it to mac. Visualization over remote servers are always challenging hence we wnat to download the images to Mac. So, run the following from your Mac
+
+```shell script
+mkdir -p ~/Downloads/landscapes/  # creayes dir eif not exists
+
+scp lab:<mat-file-complete-path>.pdf ~/Downloads/landscapes/
+```
+always use full path at source.
+
+One example is
+```shell script
+mkdir -p ~/Downloads/landscapes/
+
+scp lab:/home/aishwarya/workspace/PIPE/PIPE/data/organism/output/landscapes/O43516__O00401_pipe_sites_new.mat.pdf ~/Downloads/landscapes/
+```
+
+
+
+
+
