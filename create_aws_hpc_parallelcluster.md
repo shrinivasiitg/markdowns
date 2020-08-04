@@ -3,6 +3,8 @@
 # conda create --name pcluster_py3_7 python=3.7
 conda activate pcluster_py3_7
 # install aws-parallelcluster --upgrade --user
+# on mac do this: 
+## export PATH=~/.local/bin:$PATH
 aws-lattice-dev
 pcluster configure
 pcluster list
