@@ -150,6 +150,7 @@ mkdir -p $LOCAL_PIPE/data/organism/output/
 OUT=~/slink/mpirun_mp-pipe_1 # change the OUT directory as suited
 cd ~/ && rm -rf $OUT && mkdir -p $OUT && cd $OUT
 
+rm $LOCAL_PIPE/data/organism/output/organism_out_pipe_sites.tsv
 date && \
 mpirun --host \
 ip-10-0-175-190:96,\
