@@ -186,3 +186,6 @@ Use this variable:
 ```
 OUT=/nfs/mpirun_genTab_1
 ```
+
+# Get already populated database from:
+Location : ```s3://lattice-emr-gamma/acharys/PIPE/PIPE/data/organism/database/```
