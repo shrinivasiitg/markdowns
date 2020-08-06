@@ -173,4 +173,4 @@ sudo yum install gperf
 sudo yum install libcap-devel
 ```
 
-Add ``~/.ssh/id_rsa.pub``` of each pcluster-compute-nodes to pcluster-compute-node and vice versa
+Add ```~/.ssh/id_rsa.pub``` of each pcluster-compute-nodes to pcluster-compute-node and vice versa
