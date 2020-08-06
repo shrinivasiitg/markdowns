@@ -48,14 +48,24 @@ ln    -s    /mnt/nfs   ~/slink
 
 On pcluster-compute-nodes
 ```
-cd /tmp
-wget https://rpmfind.net/linux/epel/6/x86_64/Packages/f/fuse-sshfs-2.4-1.el6.x86_64.rpm
-sudo rpm -ivh fuse-sshfs-2.4-1.el6.x86_64.rpm
+# sudo yum install epel-release
+# epel-release-6-8.9.amzn1.noarch
+# hence install rpm for epel-6, which is https://rpmfind.net/linux/dag/redhat/el6/en/x86_64/dag/RPMS/fuse-sshfs-2.5-1.el6.rf.x86_64.rpm
+# https://rpmfind.net/linux/rpm2html/search.php?query=fuse-sshfs
 
+
+cd /tmp
+wget https://rpmfind.net/linux/dag/redhat/el6/en/x86_64/dag/RPMS/fuse-sshfs-2.5-1.el6.rf.x86_64.rpm
+sudo rpm -ivh fuse-sshfs-2.5-1.el6.rf.x86_64.rpm
+
+mkdir -p /mnt/nfs
+sshfs ip-10-0-35-233:/mnt/nfs /mnt/nfs -o IdentityFile=~/.ssh/lattice-dev.pem
+# $MASTER_NODE=ip-10-0-35-233
 ```
 # Other things that were tried but failed
 <details>
   <summary>Click to expand !!</summary>
+
 ```
 # https://serverfault.com/questions/312472/what-does-that-mean-packages-excluded-due-to-repository-priority-protections
 
