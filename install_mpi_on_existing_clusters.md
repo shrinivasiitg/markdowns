@@ -12,10 +12,10 @@ scp /Users/acharys/.ssh/lattice-dev.pem ip-10-0-39-100.us-west-2.compute.interna
 ## From Master node (ip-10-0-39-100.us-west-2.compute.internal)
 ```shell script
 # vim ~/.ssh/config
-# master node: ip-10-0-39-100
+# master node: 10.0.39.100
 # data nodes : 10.0.57.226  and  10.0.51.224
-Host ip-10-0-39-100
-    Hostname ip-10-0-39-100
+Host 10.0.39.100
+    Hostname 10.0.39.100
     IdentityFile ~/.ssh/lattice-dev.pem
     ServerAliveInterval 30
     User hadoop
