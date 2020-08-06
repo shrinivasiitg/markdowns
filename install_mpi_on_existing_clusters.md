@@ -165,3 +165,12 @@ cd /nfs/
 vi hosts
 # put ips of pcluster-master-node and all pcluster-compute-node
 ```
+
+
+```
+sudo yum install intltool
+sudo yum install gperf
+sudo yum install libcap-devel
+```
+
+Add ``~/.ssh/id_rsa.pub``` of each pcluster-compute-nodes to pcluster-compute-node and vice versa
