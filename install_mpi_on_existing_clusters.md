@@ -173,7 +173,16 @@ sudo yum install gperf
 sudo yum install libcap-devel
 ```
 
-Add ```~/.ssh/id_rsa.pub``` of each pcluster-compute-nodes to pcluster-compute-node and vice versa
+Add ```~/.ssh/id_rsa.pub``` of each pcluster-compute-nodes to pcluster-master-node and vice versa
 
 ## Run MPI from master node now
 mpirun --host ip-10-0-35-233:96,ip-10-0-42-97:96 hostname
+
+To run PIPE algo, follow the instructions here: https://github.com/shrinivasiitg/markdowns/blob/master/create_aws_hpc_parallelcluster.md
+
+Always run mpirun on ```pcluster-master-node``` 
+
+Use this variable:
+```
+OUT=/nfs/mpirun_genTab_1
+```
