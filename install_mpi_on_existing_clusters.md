@@ -174,3 +174,6 @@ sudo yum install libcap-devel
 ```
 
 Add ```~/.ssh/id_rsa.pub``` of each pcluster-compute-nodes to pcluster-compute-node and vice versa
+
+## Run MPI from master node now
+mpirun --host ip-10-0-35-233:96,ip-10-0-42-97:96 hostname
